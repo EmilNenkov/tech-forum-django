@@ -1,0 +1,61 @@
+{% extends 'account/account-summary.html' %}
+
+
+{% block details %}
+<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+<div class="card h-100">
+	<div class="card-body">
+        <form class="form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+		<div class="row gutters">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="fullName">Full Name</label>
+				</div>
+                {{ form.full_name }}
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="username">Username</label>
+				</div>
+                {{ form.username }}
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="eMail">Email</label>
+				</div>
+                {{ form.email }}
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="website">Website URL</label>
+				</div>
+                {{ form.website }}
+			</div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="image">Profile Picture</label>
+				</div>
+                {{ form.profile_pic }}
+			</div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="text">About</label>
+				</div>
+                {{ form.about }}
+			</div>
+		</div>
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="text-right">
+					<button type="button" id="submit" name="submit" class="btn btn-secondary" onclick="window.location.href='{% url account:account-details request.user.username %}'">Cancel</button>
+					<button type="submit" id="submit" name="submit" class="btn btn-primary">Update</button>
+				</div>
+			</div>
+		</div>
+        </form>
+	</div>
+</div>
+</div>
+
+{% endblock %}

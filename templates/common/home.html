@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="main-title">
+      <h1>The Tech Discussion Forum.</h1>
+
+  </div>
+            <div class="ibox-content forum-container">
+                <div class="forum-title">
+                    <div class="pull-right forum-desc">
+                        <samll>Total posts: {{ posts_count }}</samll>
+                    </div>
+                    <h3>Subjects</h3>
+                </div>
+
+                <div class="forum-item active">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="forum-icon">
+                                <i class="fa fa-shield"></i>
+                            </div>
+                            <a href="{% url 'subject:subject' title='general-discussion' %}" class="forum-item-title">General Discussion</a>
+                            <div class="forum-sub-title">Talk about software, programming languages, AI, development of projects and more.</div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ general_views }}
+                            </span>
+                            <div>
+                                <small>Views</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ general_topics_count }}
+                            </span>
+                            <div>
+                                <small>Topics</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ general_comments_count }}
+                            </span>
+                            <div>
+                                <small>Comments</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="forum-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="forum-icon">
+                                <i class="fa fa-bolt"></i>
+                            </div>
+                            <a href="{% url 'subject:subject' title='introductions' %}" class="forum-item-title">Introductions</a>
+                            <div class="forum-sub-title">New to the community? Please stop by, say hi and tell us a bit about yourself. </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ introduction_views }}
+                            </span>
+                            <div>
+                                <small>Views</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ introduction_topics_count }}
+                            </span>
+                            <div>
+                                <small>Topics</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ introduction_comments_count }}
+                            </span>
+                            <div>
+                                <small>Comments</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="forum-item active">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="forum-icon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <a href="{% url 'subject:subject' title='announcements' %}" class="forum-item-title">Announcements</a>
+                            <div class="forum-sub-title">This forum features announcements from the community staff. If there is a new post in this forum, please check it out. </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ announcement_views }}
+                            </span>
+                            <div>
+                                <small>Views</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ announcement_topics_count }}
+                            </span>
+                            <div>
+                                <small>Topics</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ announcement_comments_count }}
+                            </span>
+                            <div>
+                                <small>Comments</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="forum-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="forum-icon">
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <a href="{% url 'subject:subject' title='staff-discussion' %}" class="forum-item-title">Staff Discussion</a>
+                            <div class="forum-sub-title">This forum is for private, staff member only discussions, usually pertaining to the community itself. </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ staff_disc_views }}
+                            </span>
+                            <div>
+                                <small>Views</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ staff_disc_topics_count }}
+                            </span>
+                            <div>
+                                <small>Topics</small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 forum-info">
+                            <span class="views-number">
+                                {{ staff_disc_comments_count }}
+                            </span>
+                            <div>
+                                <small>Comments</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{% endblock %}
+
+

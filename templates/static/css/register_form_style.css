@@ -1,0 +1,86 @@
+body {
+  background: #384047;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.form {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.form label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"],
+.form input[type="url"]
+{
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.form-fields {
+  margin-top: 20px;
+}
+
+.form-fields label,
+.form-fields input,
+.form-fields ul {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.form-fields input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.form-fields label.required::before {
+  content: "*";
+  color: red;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
